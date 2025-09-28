@@ -62,7 +62,7 @@ function navbarAnimation() {
     },
   });
 }
-navbarAnimation()
+navbarAnimation();
 
 function videoconAnimation() {
   var videocon = document.querySelector("#video-container");
@@ -113,7 +113,7 @@ function cursorAnimation() {
     });
   });
 
-  document.querySelectorAll(".child").forEach(function (elem) {
+  document.querySelectorAll("a").forEach(function (elem) {
     elem.addEventListener("mouseenter", function () {
       gsap.to("#cursor", {
         transform: "translate(-50%,-50%) scale(1)",
@@ -128,20 +128,20 @@ function cursorAnimation() {
 }
 cursorAnimation();
 
-function scrollIndicatorAnimation(){
-var videocon = document.querySelector("#video-container");
-var cursor = document.querySelector("#cursor");
+function scrollIndicatorAnimation() {
+  var videocon = document.querySelector("#video-container");
+  var cursor = document.querySelector("#cursor");
 
-videocon.addEventListener("mouseenter", function() {
+  videocon.addEventListener("mouseenter", function () {
     gsap.to(cursor, {
-        transform: "translate(-50%,-50%) scale(0)"
+      transform: "translate(-50%,-50%) scale(0)",
     });
-});
+  });
 
-videocon.addEventListener("mouseleave", function() {
+  videocon.addEventListener("mouseleave", function () {
     gsap.to(cursor, {
-        transform: "translate(-50%,-50%) scale(1)"
+      transform: "translate(-50%,-50%) scale(1)",
     });
-});
+  });
 }
 scrollIndicatorAnimation();
